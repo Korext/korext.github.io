@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://korext.github.io/sitemap.xml
+# A plain summary of this site for AI agents: https://korext.github.io/llms.txt
+# The full text of this site in plain text: https://korext.github.io/llms-full.txt

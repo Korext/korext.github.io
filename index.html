@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Korext | Open standards and a platform for AI generated code</title>
+<meta name="description" content="Seven free open standards to track, license and audit AI generated code, and the Korext Platform, which enforces your policies with signed proof.">
+<meta name="keywords" content="Korext, AI code governance, AI generated code, AI attestation, AI provenance, AI code provenance, AI license notice, software supply chain, SBOM, CycloneDX, SPDX, AI incident registry, AI coding regressions, AI code adoption, carbon footprint of AI code, CSRD, proof bundle, policy as code, code scanning, GitHub Action, MCP, VS Code extension, Cursor, Windsurf, JetBrains, Claude Code, GitHub Copilot, open standards, CC0, Apache 2.0, Tom Bruno">
+<meta name="author" content="Korext">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://korext.github.io/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="text/markdown" href="/llms.txt" title="Summary for AI agents">
+<link rel="alternate" type="text/markdown" href="/llms-full.txt" title="Full text for AI agents">
+<meta name="theme-color" content="#FFFFFF">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Korext">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Korext | Open standards and a platform for AI generated code">
+<meta property="og:description" content="Seven free open standards to track, license and audit AI generated code, and a platform that enforces your policies with signed proof.">
+<meta property="og:url" content="https://korext.github.io/">
+<meta property="og:image" content="https://korext.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Korext: open standards and a platform for AI generated code. Know which code AI wrote, and prove it met your rules.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Korext | Open standards and a platform for AI generated code">
+<meta name="twitter:description" content="Seven free open standards to track, license and audit AI generated code, and a platform that enforces your policies with signed proof.">
+<meta name="twitter:image" content="https://korext.github.io/og.png">
+<meta name="twitter:image:alt" content="Korext: open standards and a platform for AI generated code. Know which code AI wrote, and prove it met your rules.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://korext.github.io/#organization",
+      "name": "Korext",
+      "url": "https://korext.com",
+      "logo": "https://korext.github.io/icon-512.png",
+      "description": "Korext builds open standards and a governance platform for AI generated code.",
+      "email": "maintainers@korext.com",
+      "foundingDate": "2024",
+      "founder": {
+        "@id": "https://tbrunoh.github.io/#person"
+      },
+      "sameAs": [
+        "https://github.com/korext",
+        "https://oss.korext.com",
+        "https://www.linkedin.com/company/korext",
+        "https://www.youtube.com/@Korext-ai"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://tbrunoh.github.io/#person",
+      "name": "Tom Bruno",
+      "url": "https://tbrunoh.github.io/",
+      "sameAs": [
+        "https://github.com/tombruno-korext",
+        "https://github.com/tbrunoh",
+        "https://www.linkedin.com/in/tbrunoh"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://korext.github.io/#website",
+      "url": "https://korext.github.io/",
+      "name": "Korext",
+      "publisher": {
+        "@id": "https://korext.github.io/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://korext.github.io/#webpage",
+      "url": "https://korext.github.io/",
+      "name": "Korext | Open standards and a platform for AI generated code",
+      "description": "Seven free open standards to track, license and audit AI generated code, and the Korext Platform, which enforces your policies with signed proof.",
+      "datePublished": "2026-11-25T20:30:00-08:00",
+      "dateModified": "2026-11-25T20:30:00-08:00",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://korext.github.io/#website"
+      },
+      "about": {
+        "@id": "https://korext.github.io/#organization"
+      },
+      "primaryImageOfPage": "https://korext.github.io/og.png"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://korext.github.io/#platform",
+      "name": "Korext Platform",
+      "applicationCategory": "DeveloperApplication",
+      "description": "Enforces security, regulatory and engineering policies on human written and AI generated code with 72 policy packs and 532 rules across 13 languages, and signs a proof bundle for every scan. Runs in VS Code, Cursor, Windsurf, JetBrains IDEs, the terminal, GitHub pull requests, Chrome and MCP.",
+      "url": "https://korext.com",
+      "downloadUrl": "https://www.npmjs.com/package/korext",
+      "publisher": {
+        "@id": "https://korext.github.io/#organization"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://korext.github.io/#standards",
+      "name": "Korext Open Standards",
+      "numberOfItems": 7,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "item": { "@type": "SoftwareSourceCode", "name": "ai-attestation", "description": "Tracks AI generated code in a repository and detects 19 AI coding tools from git history.", "codeRepository": "https://github.com/korext/ai-attestation", "url": "https://oss.korext.com/ai-attestation", "programmingLanguage": "JavaScript", "runtimePlatform": "Node.js", "license": "https://www.apache.org/licenses/LICENSE-2.0", "publisher": { "@id": "https://korext.github.io/#organization" } } },
+        { "@type": "ListItem", "position": 2, "item": { "@type": "SoftwareSourceCode", "name": "ai-license", "description": "Declares AI provenance in any open source project with a standard notice that attaches to any license.", "codeRepository": "https://github.com/korext/ai-license", "url": "https://oss.korext.com/ai-license", "programmingLanguage": "JavaScript", "runtimePlatform": "Node.js", "license": "https://www.apache.org/licenses/LICENSE-2.0", "publisher": { "@id": "https://korext.github.io/#organization" } } },
+        { "@type": "ListItem", "position": 3, "item": { "@type": "SoftwareSourceCode", "name": "supply-chain-attestation", "description": "Finds AI provenance across a dependency tree in 14 ecosystems, with CycloneDX and SPDX output.", "codeRepository": "https://github.com/korext/supply-chain-attestation", "url": "https://oss.korext.com/supply-chain", "programmingLanguage": "JavaScript", "runtimePlatform": "Node.js", "license": "https://www.apache.org/licenses/LICENSE-2.0", "publisher": { "@id": "https://korext.github.io/#organization" } } },
+        { "@type": "ListItem", "position": 4, "item": { "@type": "SoftwareSourceCode", "name": "ai-incident-registry", "description": "A public registry and open standard for AI code failures, with AICI identifiers and detection rule mapping.", "codeRepository": "https://github.com/korext/ai-incident-registry", "url": "https://oss.korext.com/incidents", "programmingLanguage": "JavaScript", "runtimePlatform": "Node.js", "license": "https://www.apache.org/licenses/LICENSE-2.0", "publisher": { "@id": "https://korext.github.io/#organization" } } },
+        { "@type": "ListItem", "position": 5, "item": { "@type": "SoftwareSourceCode", "name": "ai-regression-database", "description": "A public corpus of code patterns AI coding tools consistently get wrong, with a scanner for your repository.", "codeRepository": "https://github.com/korext/ai-regression-database", "url": "https://oss.korext.com/regressions", "programmingLanguage": "JavaScript", "runtimePlatform": "Node.js", "license": "https://www.apache.org/licenses/LICENSE-2.0", "publisher": { "@id": "https://korext.github.io/#organization" } } },
+        { "@type": "ListItem", "position": 6, "item": { "@type": "SoftwareSourceCode", "name": "ai-code-radar", "description": "Public data on AI code adoption across open source, with an API and embeddable charts.", "codeRepository": "https://github.com/korext/ai-code-radar", "url": "https://oss.korext.com/radar", "programmingLanguage": "JavaScript", "runtimePlatform": "Node.js", "license": "https://www.apache.org/licenses/LICENSE-2.0", "publisher": { "@id": "https://korext.github.io/#organization" } } },
+        { "@type": "ListItem", "position": 7, "item": { "@type": "SoftwareSourceCode", "name": "commit-carbon", "description": "Estimates the carbon footprint of AI assisted commits, with CSRD, SEC and CDP report formats.", "codeRepository": "https://github.com/korext/commit-carbon", "url": "https://oss.korext.com/commit-carbon", "programmingLanguage": "JavaScript", "runtimePlatform": "Node.js", "license": "https://www.apache.org/licenses/LICENSE-2.0", "publisher": { "@id": "https://korext.github.io/#organization" } } }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://korext.github.io/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is Korext?", "acceptedAnswer": { "@type": "Answer", "text": "Korext makes AI generated code accountable. It publishes seven open standards that make AI written software traceable, licensable and accountable, and runs the Korext Platform, which enforces your policies where code is written and signs a proof bundle for every scan." } },
+        { "@type": "Question", "name": "Which AI coding tools does ai-attestation detect?", "acceptedAnswer": { "@type": "Answer", "text": "Nineteen: GitHub Copilot, Cursor, Claude Code, Windsurf, Codeium, Aider, Devin, OpenHands, Amazon Q Developer, OpenAI Codex CLI, Gemini Code Assist, JetBrains AI, Sourcegraph Cody, Tabnine, Replit AI, Cline, Continue, GPT Engineer and Bolt. It reads publicly observable signals such as co-author trailers, commit messages, file headers and git config." } },
+        { "@type": "Question", "name": "Are the Korext open standards free to use?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Specifications and schemas are CC0 1.0 (public domain), code and tools are Apache 2.0, and data is CC BY 4.0. The Korext Platform is a separate commercial product." } },
+        { "@type": "Question", "name": "What is a Korext proof bundle?", "acceptedAnswer": { "@type": "Answer", "text": "A signed record of one governance decision: whether the change passed, warned or was blocked, which policy version was active, every check that ran, the evidence, and where the code was processed. It can be exported for audits and incident reviews." } },
+        { "@type": "Question", "name": "Where does the Korext Platform run?", "acceptedAnswer": { "@type": "Answer", "text": "In VS Code, in Cursor and Windsurf through Open VSX, in JetBrains IDEs, in the terminal through the korext CLI on npm, in GitHub pull requests through the Korext Enforce action, in Chrome, and in AI assistants through MCP. Processing can run in the US, the EU or Asia Pacific." } },
+        { "@type": "Question", "name": "How do I add Korext to my pull requests?", "acceptedAnswer": { "@type": "Answer", "text": "Add a workflow that uses Korext/enforce-action@v3. It installs the Korext CLI, scans the code with the policy packs you choose, uploads the results to GitHub Code Scanning so violations appear on the pull request, and fails the check on critical or high severity findings." } },
+        { "@type": "Question", "name": "Who builds Korext?", "acceptedAnswer": { "@type": "Answer", "text": "Korext was founded by Tom Bruno, who leads the open standards as lead maintainer. Contributors are welcome on every standard; write to maintainers@korext.com." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preload" href="/assets/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/korext.css?v=20261125a">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <nav aria-label="Primary">
+    <a class="mark" href="#top"><img src="/favicon.svg" alt="" width="34" height="34"><span>Korext<small>AI code governance</small></span></a>
+    <div class="links"><a href="#standards">Standards</a><a href="#platform">Platform</a><a href="#how">How it fits</a><a href="#faq">FAQ</a><a href="#contribute">Contribute</a><a href="https://github.com/korext">GitHub</a></div>
+  </nav>
+  </div>
+</header>
+<main class="wrap">
+
+  <header class="hero" id="top">
+    <div>
+      <div class="eyebrow rise">AI code governance</div>
+      <h1 class="statement rise d1">Know which code AI wrote, and prove it met your rules</h1>
+      <p class="lede rise d2">AI coding tools write code faster than people can review it. Korext gives every team two things: seven free open standards that make AI written code traceable, licensable and accountable, and a platform that enforces your policies where code is written and signs a proof bundle for every scan.</p>
+      <div class="cta rise d2">
+        <a class="btn primary" href="#standards">Explore the standards</a>
+        <a class="btn" href="#platform">See the platform</a>
+        <a class="btn" href="https://github.com/korext">GitHub</a>
+      </div>
+    </div>
+    <div class="hero-art rise d1">
+      <picture><source media="(max-width: 640px)" srcset="/assets/hero-mobile.svg" width="440" height="430"><img src="/assets/hero.svg" width="560" height="500" alt="The Korext mark at the centre of the places it runs: VS Code, Cursor, Windsurf, JetBrains, the CLI, the GitHub Action, Chrome and MCP." fetchpriority="high" decoding="async"></picture>
+    </div>
+  </header>
+
+  <div class="stats four rise d3" role="list" aria-label="Korext at a glance">
+    <div class="stat" role="listitem"><b>7</b><span>open standards, free to adopt</span></div>
+    <div class="stat" role="listitem"><b>19</b><span>AI coding tools detected by <span class="nw">ai-attestation</span></span></div>
+    <div class="stat" role="listitem"><b>72</b><span>policy packs in the Korext Platform</span></div>
+    <div class="stat" role="listitem"><b>532</b><span>rules across 13 languages</span></div>
+  </div>
+
+  <section id="standards" aria-labelledby="standards-h">
+    <div class="eyebrow">Open standards</div>
+    <h2 id="standards-h">Seven open standards for AI written code</h2>
+    <p class="intro">Each standard pairs a public domain specification with a free tool, so any team, vendor or open source project can adopt it in one command. Each has its own page at <a href="https://oss.korext.com">oss.korext.com</a>.</p>
+    <div class="std">
+      <div class="card">
+        <span class="tag t-tide">Track</span>
+        <h3>ai-attestation</h3>
+        <p>Tracks AI generated code in your repository. Scans git history for 19 AI coding tools, writes a machine readable <code class="inline">.ai-attestation.yaml</code> and keeps it current on every commit.</p>
+        <div class="cmd"><code>npx @korext/ai-attestation init</code><button type="button" aria-label="Copy the ai-attestation command">Copy</button></div>
+        <div class="more"><a href="https://github.com/korext/ai-attestation">Repository</a><a href="https://oss.korext.com/ai-attestation">Specification</a></div>
+      </div>
+      <div class="card">
+        <span class="tag t-canopy">Declare</span>
+        <h3>ai-license</h3>
+        <p>Declares AI provenance in any open source project with a standard notice that attaches to any existing license, from five provenance levels between none and full.</p>
+        <div class="cmd"><code>npx @korext/ai-license generate</code><button type="button" aria-label="Copy the ai-license command">Copy</button></div>
+        <div class="more"><a href="https://github.com/korext/ai-license">Repository</a><a href="https://oss.korext.com/ai-license">Specification</a></div>
+      </div>
+      <div class="card">
+        <span class="tag t-gold">Scan</span>
+        <h3>supply-chain-attestation</h3>
+        <p>Finds AI provenance across your whole dependency tree in 14 ecosystems, with CycloneDX and SPDX output and private registry support.</p>
+        <div class="cmd"><code>npx @korext/supply-check scan</code><button type="button" aria-label="Copy the supply-check command">Copy</button></div>
+        <div class="more"><a href="https://github.com/korext/supply-chain-attestation">Repository</a><a href="https://oss.korext.com/supply-chain">Specification</a></div>
+      </div>
+      <div class="card">
+        <span class="tag t-tide">Report</span>
+        <h3>ai-incident-registry</h3>
+        <p>A public registry of AI code failures, so the lessons from one team's postmortem reach everyone. AICI identifiers, detection rule mapping and anonymous reporting.</p>
+        <div class="cmd"><code>npx @korext/incident-report draft</code><button type="button" aria-label="Copy the incident-report command">Copy</button></div>
+        <div class="more"><a href="https://github.com/korext/ai-incident-registry">Repository</a><a href="https://oss.korext.com/incidents">Registry</a></div>
+      </div>
+      <div class="card">
+        <span class="tag t-canopy">Detect</span>
+        <h3>ai-regression-database</h3>
+        <p>Code patterns AI coding tools keep getting wrong, reproducible and version tracked, with a scanner that checks your repository against every published pattern.</p>
+        <div class="cmd"><code>npx @korext/regression-submit detect</code><button type="button" aria-label="Copy the regression-submit command">Copy</button></div>
+        <div class="more"><a href="https://github.com/korext/ai-regression-database">Repository</a><a href="https://oss.korext.com/regressions">Database</a></div>
+      </div>
+      <div class="card">
+        <span class="tag t-gold">Measure</span>
+        <h3>ai-code-radar</h3>
+        <p>Public data on AI code adoption across open source, built on attestation data, with a public API, an SDK and embeddable charts.</p>
+        <div class="cmd"><code>npm install @korext/radar-data</code><button type="button" aria-label="Copy the radar-data command">Copy</button></div>
+        <div class="more"><a href="https://github.com/korext/ai-code-radar">Repository</a><a href="https://oss.korext.com/radar">Radar</a></div>
+      </div>
+      <div class="card">
+        <span class="tag t-tide">Sustain</span>
+        <h3>commit-carbon</h3>
+        <p>Estimates the carbon footprint of AI assisted commits as ranged, conservative figures, with regional grid intensity and CSRD, SEC and CDP report formats.</p>
+        <div class="cmd"><code>npx @korext/commit-carbon scan</code><button type="button" aria-label="Copy the commit-carbon command">Copy</button></div>
+        <div class="more"><a href="https://github.com/korext/commit-carbon">Repository</a><a href="https://oss.korext.com/commit-carbon">Specification</a></div>
+      </div>
+      <a class="card home" href="https://oss.korext.com">
+        <span class="tag t-tide">All seven</span>
+        <h3>oss.korext.com</h3>
+        <p>The home of the Korext open standards: every specification and tool, the incident registry, the regression database and the radar.</p>
+        <span class="go t-tide">Visit Korext Open Source</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="platform" class="warm" aria-labelledby="platform-h">
+    <div class="eyebrow">Platform</div>
+    <h2 id="platform-h">One platform enforces your rules where code is written</h2>
+    <p class="intro">The Korext Platform checks human written and AI generated code against security, regulatory and engineering policies, in the editor, the terminal, the pull request and the AI assistant itself. It is a commercial product; learn more at <a href="https://korext.com">korext.com</a>.</p>
+    <div class="points">
+      <div><h3 class="minor">72 policy packs, 532 rules</h3><p>Packs such as web, OWASP, PCI DSS, HIPAA and GDPR, across 13 languages. Combine several packs in one scan.</p></div>
+      <div><h3 class="minor">A signed proof bundle for every scan</h3><p>Each decision to pass, warn or block records the policy version, every check that ran, the evidence and where the code was processed, ready for an audit.</p></div>
+      <div><h3 class="minor">Processing in your region</h3><p>Choose the US, the EU or Asia Pacific for each scan, so the proof shows where the code was processed and stored.</p></div>
+    </div>
+    <ul class="surfaces" aria-label="Where the Korext Platform runs">
+      <li><a href="https://marketplace.visualstudio.com/items?itemName=Korext.korext"><b>VS Code</b><span>Visual Studio Marketplace</span></a></li>
+      <li><a href="https://open-vsx.org/extension/Korext/korext"><b>Cursor and Windsurf</b><span>Open VSX</span></a></li>
+      <li><a href="https://plugins.jetbrains.com/plugin/30716-korext"><b>JetBrains IDEs</b><span>JetBrains Marketplace</span></a></li>
+      <li><a href="https://www.npmjs.com/package/korext"><b>Terminal</b><span>npm install -g korext</span></a></li>
+      <li><a href="https://github.com/marketplace/actions/korext-enforce"><b>Pull requests</b><span>Korext Enforce on GitHub Marketplace</span></a></li>
+      <li><a href="https://chromewebstore.google.com/detail/korext-ai-code-governance/binigmpigofmlbcpacfknghdilflhccl"><b>Chrome</b><span>Chrome Web Store</span></a></li>
+      <li><a href="https://korext.com/mcp"><b>AI assistants</b><span>MCP, five tools</span></a></li>
+    </ul>
+    <p class="note">Gate every pull request with one workflow file, <code class="inline">.github/workflows/korext.yml</code>. Violations appear as Code Scanning annotations on the diff, and the check fails on critical or high severity findings.</p>
+<pre aria-label="Example GitHub workflow for Korext Enforce"><span class="c"># .github/workflows/korext.yml</span>
+name: Korext Enforcement
+on: [push, pull_request]
+permissions:
+  contents: read
+  security-events: write
+jobs:
+  enforce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Korext/enforce-action@v3
+        with:
+          api-token: ${{ secrets.KOREXT_API_TOKEN }}</pre>
+  </section>
+
+  <section id="how" aria-labelledby="how-h">
+    <div class="eyebrow">How it fits</div>
+    <h2 id="how-h">The standards record the facts, and the platform acts on them</h2>
+    <p class="intro">Attestation, licensing and supply chain data describe what AI wrote and where it came from. The registry, the regression database and the radar turn many teams' experience into shared knowledge. The platform enforces policy on top, and enforce-action gates the merge.</p>
+    <figure><picture><source media="(max-width: 640px)" srcset="/assets/stack-mobile.svg" width="600" height="842"><img src="/assets/stack.svg" width="1000" height="490" loading="lazy" alt="How Korext fits together: seven open standards (ai-attestation, ai-license, supply-chain-attestation, ai-incident-registry, ai-code-radar, ai-regression-database, commit-carbon) feed the Korext Platform, which checks AI generated code against 72 policy packs and 532 rules in 13 languages and signs a proof bundle for every scan, and enforce-action, which scans every pull request and fails the check on critical or high severity violations."></picture></figure>
+    <div class="table lic">
+      <table>
+        <thead><tr><th>Layer</th><th>License</th><th>What it means</th></tr></thead>
+        <tbody>
+          <tr><td>Specifications and schemas</td><td>CC0 1.0</td><td>Public domain, so any vendor or project can implement them</td></tr>
+          <tr><td>Code and tools</td><td>Apache 2.0</td><td>A permissive license with an explicit patent grant</td></tr>
+          <tr><td>Data and datasets</td><td>CC BY 4.0</td><td>Free to reuse in research and reporting, with attribution</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-h">
+    <div class="eyebrow">FAQ</div>
+    <h2 id="faq-h">Questions teams ask first</h2>
+    <div class="faq">
+      <details><summary>What is Korext?</summary><p>Korext makes AI generated code accountable. It publishes seven open standards that make AI written software traceable, licensable and accountable, and runs the Korext Platform, which enforces your policies where code is written and signs a proof bundle for every scan.</p></details>
+      <details><summary>Which AI coding tools does ai-attestation detect?</summary><p>Nineteen: GitHub Copilot, Cursor, Claude Code, Windsurf, Codeium, Aider, Devin, OpenHands, Amazon Q Developer, OpenAI Codex CLI, Gemini Code Assist, JetBrains AI, Sourcegraph Cody, Tabnine, Replit AI, Cline, Continue, GPT Engineer and Bolt. It reads publicly observable signals such as co-author trailers, commit messages, file headers and git config. <a href="https://github.com/korext/ai-attestation/blob/main/CONTRIBUTING.md">Add a tool</a>.</p></details>
+      <details><summary>Are the Korext open standards free to use?</summary><p>Yes. Specifications and schemas are CC0 1.0 (public domain), code and tools are Apache 2.0, and data is CC BY 4.0. The Korext Platform is a separate commercial product.</p></details>
+      <details><summary>What is a Korext proof bundle?</summary><p>A signed record of one governance decision: whether the change passed, warned or was blocked, which policy version was active, every check that ran, the evidence, and where the code was processed. It can be exported for audits and incident reviews.</p></details>
+      <details><summary>Where does the Korext Platform run?</summary><p>In VS Code, in Cursor and Windsurf through Open VSX, in JetBrains IDEs, in the terminal through the <a href="https://www.npmjs.com/package/korext">korext CLI</a> on npm, in GitHub pull requests through the <a href="https://github.com/marketplace/actions/korext-enforce">Korext Enforce</a> action, in Chrome, and in AI assistants through <a href="https://korext.com/mcp">MCP</a>. Processing can run in the US, the EU or Asia Pacific.</p></details>
+      <details><summary>How do I add Korext to my pull requests?</summary><p>Add a workflow that uses <code class="inline">Korext/enforce-action@v3</code>. It installs the Korext CLI, scans the code with the policy packs you choose, uploads the results to GitHub Code Scanning so violations appear on the pull request, and fails the check on critical or high severity findings. See <a href="https://github.com/korext/enforce-action">enforce-action</a>.</p></details>
+      <details><summary>Who builds Korext?</summary><p>Korext was founded by <a href="https://tbrunoh.github.io/">Tom Bruno</a>, who leads the open standards as lead maintainer. Contributors are welcome on every standard; write to <a href="mailto:maintainers@korext.com">maintainers@korext.com</a>.</p></details>
+    </div>
+  </section>
+
+  <section id="contribute" aria-labelledby="contribute-h">
+    <div class="eyebrow">Contribute</div>
+    <h2 id="contribute-h">Help build the standards</h2>
+    <p class="intro">The standards get better with every team that uses them. Each repository has a CONTRIBUTING guide, and three contributions make a difference straight away.</p>
+    <div class="grid">
+      <a class="card" href="https://github.com/korext/ai-attestation/blob/main/CONTRIBUTING.md">
+        <span class="tag t-tide">ai-attestation</span>
+        <h3>Add an AI coding tool</h3>
+        <p>Teach ai-attestation to recognize a tool it does not detect yet, from the signals that tool leaves in git.</p>
+        <span class="go t-tide">Contributing guide</span>
+      </a>
+      <a class="card" href="https://oss.korext.com/incidents">
+        <span class="tag t-canopy">ai-incident-registry</span>
+        <h3>Report an incident</h3>
+        <p>Share what went wrong when AI generated code failed, anonymously if you prefer, so other teams avoid it.</p>
+        <span class="go t-canopy">Open the registry</span>
+      </a>
+      <a class="card" href="https://oss.korext.com/regressions">
+        <span class="tag t-gold">ai-regression-database</span>
+        <h3>Document a regression</h3>
+        <p>Record a pattern an AI coding tool keeps getting wrong, with a reproduction, so scanners can catch it.</p>
+        <span class="go t-gold">Open the database</span>
+      </a>
+    </div>
+    <div class="founder">
+      <img src="/assets/tom-bruno-128.jpg" alt="Portrait of Tom Bruno" width="56" height="56" loading="lazy">
+      <p><b><a href="https://tbrunoh.github.io/">Tom Bruno</a></b> founded Korext and is lead maintainer of the open standards. To become a reviewer or maintainer, write to <a href="mailto:maintainers@korext.com">maintainers@korext.com</a> or meet the <a href="https://oss.korext.com/team">team</a>.</p>
+    </div>
+  </section>
+
+</main>
+<footer id="connect" class="wrap">
+  <img class="contours" src="/assets/contours.svg" alt="" width="1200" height="72" loading="lazy">
+  <div class="row">
+    <div class="who">
+      <span>© 2026 Korext · Open standards and a platform for AI generated code</span>
+      <span class="aka">Specifications CC0 1.0 · Code Apache 2.0 · Data CC BY 4.0</span>
+    </div>
+    <div class="links">
+      <a href="https://github.com/korext">GitHub</a>
+      <a href="https://oss.korext.com">Open standards</a>
+      <a href="https://korext.com">Platform</a>
+      <a href="https://www.linkedin.com/company/korext">LinkedIn</a>
+      <a href="mailto:maintainers@korext.com">Email</a>
+    </div>
+  </div>
+</footer>
+<script>
+  (function () {
+    var bar = document.querySelector('.topbar');
+    if (bar) { var on = function () { bar.classList.toggle('scrolled', window.scrollY > 8); }; on(); window.addEventListener('scroll', on, { passive: true }); }
+    document.querySelectorAll('.cmd button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var t = b.previousElementSibling.textContent;
+        var done = function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); };
+        if (navigator.clipboard) { navigator.clipboard.writeText(t).then(done, function () {}); }
+      });
+    });
+  })();
+</script>
+</body>
+</html>

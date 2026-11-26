@@ -1,0 +1,28 @@
+# Korext
+
+> Korext makes AI generated code accountable. It publishes seven free open standards that make AI written software traceable, licensable and accountable, and runs the Korext Platform, which enforces security, regulatory and engineering policies where code is written and signs a proof bundle for every scan.
+
+Korext was founded by Tom Bruno (https://tbrunoh.github.io/), lead maintainer of the open standards. Specifications are CC0 1.0, code is Apache 2.0 and data is CC BY 4.0. The Korext Platform is a commercial product. Contact: maintainers@korext.com.
+
+## Open standards
+
+- [ai-attestation](https://github.com/korext/ai-attestation): tracks AI generated code in a repository and detects 19 AI coding tools from git history. Start with `npx @korext/ai-attestation init`.
+- [ai-license](https://github.com/korext/ai-license): declares AI provenance in any open source project with a notice that attaches to any license. Start with `npx @korext/ai-license generate`.
+- [supply-chain-attestation](https://github.com/korext/supply-chain-attestation): AI provenance across a dependency tree in 14 ecosystems, with CycloneDX and SPDX output. Start with `npx @korext/supply-check scan`.
+- [ai-incident-registry](https://github.com/korext/ai-incident-registry): a public registry of AI code failures with AICI identifiers. Start with `npx @korext/incident-report draft`.
+- [ai-regression-database](https://github.com/korext/ai-regression-database): code patterns AI tools keep getting wrong, with a scanner. Start with `npx @korext/regression-submit detect`.
+- [ai-code-radar](https://github.com/korext/ai-code-radar): public data on AI code adoption across open source, with an API and SDK. Start with `npm install @korext/radar-data`.
+- [commit-carbon](https://github.com/korext/commit-carbon): the carbon footprint of AI assisted commits, with CSRD, SEC and CDP report formats. Start with `npx @korext/commit-carbon scan`.
+
+## Platform
+
+- [Korext Platform](https://korext.com): 72 policy packs and 532 rules across 13 languages, a signed proof bundle for every scan, processing in the US, the EU or Asia Pacific.
+- [Korext Enforce](https://github.com/marketplace/actions/korext-enforce): GitHub Action `Korext/enforce-action@v3` that scans every pull request and fails the check on critical or high severity violations.
+- [korext CLI](https://www.npmjs.com/package/korext): `npm install -g korext`, then `korext enforce ./src`.
+- Editors and assistants: [VS Code](https://marketplace.visualstudio.com/items?itemName=Korext.korext), [Cursor and Windsurf through Open VSX](https://open-vsx.org/extension/Korext/korext), [JetBrains](https://plugins.jetbrains.com/plugin/30716-korext), [Chrome](https://chromewebstore.google.com/detail/korext-ai-code-governance/binigmpigofmlbcpacfknghdilflhccl) and [MCP](https://korext.com/mcp).
+
+## More
+
+- [Full text of this site](https://korext.github.io/llms-full.txt)
+- [Korext on GitHub](https://github.com/korext)
+- [Korext Open Source](https://oss.korext.com)

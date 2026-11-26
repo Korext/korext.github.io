@@ -1,0 +1,234 @@
+# Korext: full text
+
+> The full text of korext.github.io for AI agents and readers who prefer plain text: Korext open standards and the Korext Platform for AI generated code. A shorter summary is at https://korext.github.io/llms.txt. Updated 25 November 2026.
+
+---
+
+Source page: https://korext.github.io/
+
+AI code governance
+
+# Know which code AI wrote, and prove it met your rules
+
+AI coding tools write code faster than people can review it. Korext gives every team two things: seven free open standards that make AI written code traceable, licensable and accountable, and a platform that enforces your policies where code is written and signs a proof bundle for every scan.
+
+[Explore the standards](https://korext.github.io/#standards) [See the platform](https://korext.github.io/#platform) [GitHub](https://github.com/korext)
+
+[Image: The Korext mark at the centre of the places it runs: VS Code, Cursor, Windsurf, JetBrains, the CLI, the GitHub Action, Chrome and MCP.]
+
+**7** open standards, free to adopt
+
+**19** AI coding tools detected by ai-attestation
+
+**72** policy packs in the Korext Platform
+
+**532** rules across 13 languages
+
+Open standards
+
+## Seven open standards for AI written code
+
+Each standard pairs a public domain specification with a free tool, so any team, vendor or open source project can adopt it in one command. Each has its own page at [oss.korext.com](https://oss.korext.com).
+
+Track
+
+### ai-attestation
+
+Tracks AI generated code in your repository. Scans git history for 19 AI coding tools, writes a machine readable .ai-attestation.yaml and keeps it current on every commit.
+
+npx @korext/ai-attestation init
+
+[Repository](https://github.com/korext/ai-attestation) · [Specification](https://oss.korext.com/ai-attestation)
+
+Declare
+
+### ai-license
+
+Declares AI provenance in any open source project with a standard notice that attaches to any existing license, from five provenance levels between none and full.
+
+npx @korext/ai-license generate
+
+[Repository](https://github.com/korext/ai-license) · [Specification](https://oss.korext.com/ai-license)
+
+Scan
+
+### supply-chain-attestation
+
+Finds AI provenance across your whole dependency tree in 14 ecosystems, with CycloneDX and SPDX output and private registry support.
+
+npx @korext/supply-check scan
+
+[Repository](https://github.com/korext/supply-chain-attestation) · [Specification](https://oss.korext.com/supply-chain)
+
+Report
+
+### ai-incident-registry
+
+A public registry of AI code failures, so the lessons from one team's postmortem reach everyone. AICI identifiers, detection rule mapping and anonymous reporting.
+
+npx @korext/incident-report draft
+
+[Repository](https://github.com/korext/ai-incident-registry) · [Registry](https://oss.korext.com/incidents)
+
+Detect
+
+### ai-regression-database
+
+Code patterns AI coding tools keep getting wrong, reproducible and version tracked, with a scanner that checks your repository against every published pattern.
+
+npx @korext/regression-submit detect
+
+[Repository](https://github.com/korext/ai-regression-database) · [Database](https://oss.korext.com/regressions)
+
+Measure
+
+### ai-code-radar
+
+Public data on AI code adoption across open source, built on attestation data, with a public API, an SDK and embeddable charts.
+
+npm install @korext/radar-data
+
+[Repository](https://github.com/korext/ai-code-radar) · [Radar](https://oss.korext.com/radar)
+
+Sustain
+
+### commit-carbon
+
+Estimates the carbon footprint of AI assisted commits as ranged, conservative figures, with regional grid intensity and CSRD, SEC and CDP report formats.
+
+npx @korext/commit-carbon scan
+
+[Repository](https://github.com/korext/commit-carbon) · [Specification](https://oss.korext.com/commit-carbon)
+
+All seven
+
+### oss.korext.com
+
+The home of the Korext open standards: every specification and tool, the incident registry, the regression database and the radar.
+
+Link: https://oss.korext.com
+
+Platform
+
+## One platform enforces your rules where code is written
+
+The Korext Platform checks human written and AI generated code against security, regulatory and engineering policies, in the editor, the terminal, the pull request and the AI assistant itself. It is a commercial product; learn more at [korext.com](https://korext.com).
+
+### 72 policy packs, 532 rules
+
+Packs such as web, OWASP, PCI DSS, HIPAA and GDPR, across 13 languages. Combine several packs in one scan.
+
+### A signed proof bundle for every scan
+
+Each decision to pass, warn or block records the policy version, every check that ran, the evidence and where the code was processed, ready for an audit.
+
+### Processing in your region
+
+Choose the US, the EU or Asia Pacific for each scan, so the proof shows where the code was processed and stored.
+
+- [**VS Code**: Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Korext.korext)
+- [**Cursor and Windsurf**: Open VSX](https://open-vsx.org/extension/Korext/korext)
+- [**JetBrains IDEs**: JetBrains Marketplace](https://plugins.jetbrains.com/plugin/30716-korext)
+- [**Terminal**: npm install -g korext](https://www.npmjs.com/package/korext)
+- [**Pull requests**: Korext Enforce on GitHub Marketplace](https://github.com/marketplace/actions/korext-enforce)
+- [**Chrome**: Chrome Web Store](https://chromewebstore.google.com/detail/korext-ai-code-governance/binigmpigofmlbcpacfknghdilflhccl)
+- [**AI assistants**: MCP, five tools](https://korext.com/mcp)
+
+Gate every pull request with one workflow file, .github/workflows/korext.yml. Violations appear as Code Scanning annotations on the diff, and the check fails on critical or high severity findings.
+
+```yaml
+# .github/workflows/korext.yml
+name: Korext Enforcement
+on: [push, pull_request]
+permissions:
+  contents: read
+  security-events: write
+jobs:
+  enforce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Korext/enforce-action@v3
+        with:
+          api-token: ${{ secrets.KOREXT_API_TOKEN }}
+```
+
+How it fits
+
+## The standards record the facts, and the platform acts on them
+
+Attestation, licensing and supply chain data describe what AI wrote and where it came from. The registry, the regression database and the radar turn many teams' experience into shared knowledge. The platform enforces policy on top, and enforce-action gates the merge.
+
+[Image: How Korext fits together: seven open standards (ai-attestation, ai-license, supply-chain-attestation, ai-incident-registry, ai-code-radar, ai-regression-database, commit-carbon) feed the Korext Platform, which checks AI generated code against 72 policy packs and 532 rules in 13 languages and signs a proof bundle for every scan, and enforce-action, which scans every pull request and fails the check on critical or high severity violations.]
+
+| Layer | License | What it means |
+| --- | --- | --- |
+| Specifications and schemas | CC0 1.0 | Public domain, so any vendor or project can implement them |
+| Code and tools | Apache 2.0 | A permissive license with an explicit patent grant |
+| Data and datasets | CC BY 4.0 | Free to reuse in research and reporting, with attribution |
+
+FAQ
+
+## Questions teams ask first
+
+### What is Korext?
+
+Korext makes AI generated code accountable. It publishes seven open standards that make AI written software traceable, licensable and accountable, and runs the Korext Platform, which enforces your policies where code is written and signs a proof bundle for every scan.
+
+### Which AI coding tools does ai-attestation detect?
+
+Nineteen: GitHub Copilot, Cursor, Claude Code, Windsurf, Codeium, Aider, Devin, OpenHands, Amazon Q Developer, OpenAI Codex CLI, Gemini Code Assist, JetBrains AI, Sourcegraph Cody, Tabnine, Replit AI, Cline, Continue, GPT Engineer and Bolt. It reads publicly observable signals such as co-author trailers, commit messages, file headers and git config. [Add a tool](https://github.com/korext/ai-attestation/blob/main/CONTRIBUTING.md).
+
+### Are the Korext open standards free to use?
+
+Yes. Specifications and schemas are CC0 1.0 (public domain), code and tools are Apache 2.0, and data is CC BY 4.0. The Korext Platform is a separate commercial product.
+
+### What is a Korext proof bundle?
+
+A signed record of one governance decision: whether the change passed, warned or was blocked, which policy version was active, every check that ran, the evidence, and where the code was processed. It can be exported for audits and incident reviews.
+
+### Where does the Korext Platform run?
+
+In VS Code, in Cursor and Windsurf through Open VSX, in JetBrains IDEs, in the terminal through the [korext CLI](https://www.npmjs.com/package/korext) on npm, in GitHub pull requests through the [Korext Enforce](https://github.com/marketplace/actions/korext-enforce) action, in Chrome, and in AI assistants through [MCP](https://korext.com/mcp). Processing can run in the US, the EU or Asia Pacific.
+
+### How do I add Korext to my pull requests?
+
+Add a workflow that uses Korext/enforce-action@v3. It installs the Korext CLI, scans the code with the policy packs you choose, uploads the results to GitHub Code Scanning so violations appear on the pull request, and fails the check on critical or high severity findings. See [enforce-action](https://github.com/korext/enforce-action).
+
+### Who builds Korext?
+
+Korext was founded by [Tom Bruno](https://tbrunoh.github.io/), who leads the open standards as lead maintainer. Contributors are welcome on every standard; write to [maintainers@korext.com](mailto:maintainers@korext.com).
+
+Contribute
+
+## Help build the standards
+
+The standards get better with every team that uses them. Each repository has a CONTRIBUTING guide, and three contributions make a difference straight away.
+
+ai-attestation
+
+### Add an AI coding tool
+
+Teach ai-attestation to recognize a tool it does not detect yet, from the signals that tool leaves in git.
+
+Link: https://github.com/korext/ai-attestation/blob/main/CONTRIBUTING.md
+
+ai-incident-registry
+
+### Report an incident
+
+Share what went wrong when AI generated code failed, anonymously if you prefer, so other teams avoid it.
+
+Link: https://oss.korext.com/incidents
+
+ai-regression-database
+
+### Document a regression
+
+Record a pattern an AI coding tool keeps getting wrong, with a reproduction, so scanners can catch it.
+
+Link: https://oss.korext.com/regressions
+
+[Image: Portrait of Tom Bruno]
+
+**[Tom Bruno](https://tbrunoh.github.io/)** founded Korext and is lead maintainer of the open standards. To become a reviewer or maintainer, write to [maintainers@korext.com](mailto:maintainers@korext.com) or meet the [team](https://oss.korext.com/team).
