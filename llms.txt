@@ -1,6 +1,6 @@
 # Korext
 
-> Korext makes AI generated code accountable. It publishes seven free open standards that make AI written software traceable, licensable and accountable, and runs the Korext Platform, which enforces security, regulatory and engineering policies where code is written and signs a proof bundle for every scan.
+> Korext makes AI generated code accountable. It publishes seven free open standards that make AI written software traceable, licensable and accountable, and runs the Korext Platform, which enforces security, regulatory and engineering policies where code is written and signs proof bundles for audit.
 
 Korext was founded by Tom Bruno (https://tbrunoh.github.io/), lead maintainer of the open standards. Specifications are CC0 1.0, code is Apache 2.0 and data is CC BY 4.0. The Korext Platform is a commercial product. Contact: maintainers@korext.com.
 
@@ -16,7 +16,7 @@ Korext was founded by Tom Bruno (https://tbrunoh.github.io/), lead maintainer of
 
 ## Platform
 
-- [Korext Platform](https://korext.com): 72 policy packs and 532 rules across 13 languages, a signed proof bundle for every scan, processing in the US, the EU or Asia Pacific.
+- [Korext Platform](https://korext.com): 72 policy packs and 532 rules across 13 languages, signed proof bundles for audit, processing in the US, the EU or Asia Pacific.
 - [Korext Enforce](https://github.com/marketplace/actions/korext-enforce): GitHub Action `Korext/enforce-action@v3` that scans every pull request and fails the check on critical or high severity violations.
 - [korext CLI](https://www.npmjs.com/package/korext): `npm install -g korext`, then `korext enforce ./src`.
 - Editors and assistants: [VS Code](https://marketplace.visualstudio.com/items?itemName=Korext.korext), [Cursor and Windsurf through Open VSX](https://open-vsx.org/extension/Korext/korext), [JetBrains](https://plugins.jetbrains.com/plugin/30716-korext), [Chrome](https://chromewebstore.google.com/detail/korext-ai-code-governance/binigmpigofmlbcpacfknghdilflhccl) and [MCP](https://korext.com/mcp).
